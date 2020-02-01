@@ -58,7 +58,7 @@ comment:
   # You can find your shortname on the Settings page of your Disqus account
   disqus: # <username>.disqus.com
   # Enter your Facebook app_id (not your username) to enable commenting on posts
-  facebook: # app_id
+  facebook: 986163345102387 # app_id
 
 # Enter your Google Analytics web tracking code (e.g. UA-2110908-2) to activate tracking
 google_analytics:
