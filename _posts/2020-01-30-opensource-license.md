@@ -138,8 +138,8 @@ FSF(Free Software Foundation)에서 만든 라이센스이며 BSD 라이센스�
 궁금하신 내용이나 잘못된 정보가 있다면 댓글이나 tkddlf59@gmail.com으로 메일 주세요. 감사합니다😉
 
 ## References
- - https://www.olis.or.kr/license/licenseGuide.do
- - https://opensource.org/osd
- - https://ko.wikipedia.org/wiki/MIT_%ED%97%88%EA%B0%80%EC%84%9C
- - https://en.wikipedia.org/wiki/BSD_licenses
- - https://www.olis.or.kr/license/distribute.do
+ - [https://www.olis.or.kr/license/licenseGuide.do](https://www.olis.or.kr/license/licenseGuide.do)
+ - [https://opensource.org/osd](https://opensource.org/osd)
+ - [https://ko.wikipedia.org/wiki/MIT_%ED%97%88%EA%B0%80%EC%84%9C](https://ko.wikipedia.org/wiki/MIT_%ED%97%88%EA%B0%80%EC%84%9C)
+ - [https://en.wikipedia.org/wiki/BSD_licenses](https://en.wikipedia.org/wiki/BSD_licenses)
+ - [https://www.olis.or.kr/license/distribute.do](https://www.olis.or.kr/license/distribute.do)

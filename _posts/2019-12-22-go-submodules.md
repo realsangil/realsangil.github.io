@@ -8,7 +8,7 @@ tags: ['golang', 'modules']
 공용 모듈 버전관리를 잘못하여 겪은 버전간섭 문제를 해결한 경험을 토대로 작성한 글입니다.
 <!--more-->
 
-![thumbnail](https://github.com/egonelbre/gophers/raw/master/.thumb/animation/gopher-dance-long-3x.gif)
+![thumbnail](https://github.com/egonelbre/gophers/raw/master/.thumb/animation/gopher-dance-long-3x.gif){: .center-image}
 
 go 1.13 버전으로 업데이트 되면서 go modules가 정식으로 릴리즈 되어 `dep`, `glide`를 별도로 설치하지 않고도 `go mod` 커맨드로 모듈들을 관리할 수 있게 되었습니다. 
 
@@ -42,4 +42,4 @@ gopkg
 궁금하신 점이나 잘못된 부분이 있다면 댓글이나 tkddlf59@gmail.com로 메일 남겨주시면 감사하겠습니다.
 
 ## Reference
-- https://github.com/go-modules-by-example/index/tree/master/009_submodules
+- [github.com/go-modules-by-example/index/tree/master/009_submodules](https://github.com/go-modules-by-example/index/tree/master/009_submodules)
