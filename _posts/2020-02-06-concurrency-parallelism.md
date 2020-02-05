@@ -1,7 +1,7 @@
 ---
 layout: post
 title: "Concurrency와 Parallelism의 차이"
-tags: ["golang", "concurrency", "parallelism"]
+tags: ["concurrency", "parallelism"]
 canonical_url: ''
 ---
 
