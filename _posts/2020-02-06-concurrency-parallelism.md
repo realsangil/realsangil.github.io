@@ -2,7 +2,7 @@
 layout: post
 title: "Concurrency와 Parallelism의 차이"
 tags: ["golang", "concurrency", "parallelism"]
-canonical_url: 'https://blog.lalaworks.com/20200206-concurrency-parallelism'
+# canonical_url: 'https://blog.lalaworks.com/20200206-concurrency-parallelism'
 ---
 
 최근에 golang을 처음부터 다시 공부하면서 헷갈렸던 Concurrency와 Parallelism의 차이점과 관계에 대해 개인적으로 공부한 내용을 간단한 예시와 함께 정리한 글입니다.
@@ -31,10 +31,9 @@ Go언어 주요 개발자 중 한명인 '롭 파이크'는 말을 직역하면 '
 3세트는 스쿼트 5회, 푸쉬업 5회, 줄넘기 10회 순으로 진행 했습니다.  
 
 동시성은 ~~작업들을 동시에 실행~~하는 것이 아니라 위의 예시와 그림같이 작업들 쪼개서 번갈아 가며 수행하는 것을 의미합니다.  
-<mark>시간의 관점으로는 동시가 아닙니다.</mark>  
-
+컴퓨터에서는 굉장히 빠른 속도로 처리하기 때문에 동시에 처리되는 것처럼 느껴지지만 <mark>시간의 관점으로는 동시가 아닙니다.</mark>  
 이러한 관점으로 본다면 싱글코어 컴퓨터가 어떻게 멀티태스킹이 가능한지 알 수 있습니다.  
-컴퓨터는 굉장히 빠른 속도로 사용자가 요구하는 작업들을 번갈아 가며 처리하기 때문에 우리에게는 동시에 처리하는 것처럼 보이는 것입니다.  
+  
 현실세계에서 병렬적으로 일어나는 일들을 컴퓨터 세계에서 구현하기 위한 방법 중 하나가 '동시성'입니다.
 
 ## 병렬성(Parallelism)
@@ -46,7 +45,7 @@ Go언어 주요 개발자 중 한명인 '롭 파이크'는 말을 직역하면 '
 병렬성은 동시에 많은 일을 실행하는 것을 의미합니다.  
 <mark>시간의 관점으로도 완벽한 동시가 맞습니다.</mark>  
 병렬성은 싱글 코어에서는 불가능합니다. 멀티 코어이거나 싱글 코어 컴퓨터가 둘 이상 존재할 때 가능합니다.  
-예를 들어 블로그 서비스한다고 가정할 때 이미지 업로드 기능을 비동기로 구현한다고 가정해봅시다. 이때 리사이징이나 화질 저하 같은 작업들이 서버에서 처리한다면 병렬성이라고 할 수 있습니다.
+예를 들어 글 작성 기능 중 이미지 업로드 기능을 비동기로 구현한다고 가정해봅시다. 이때 리사이징이나 화질 저하 같은 작업들이 서버에서 처리한다면 병렬성이라고 할 수 있습니다. 
 
 ## Conclusion
 
@@ -59,9 +58,10 @@ Go언어 주요 개발자 중 한명인 '롭 파이크'는 말을 직역하면 '
 감사합니다.🙏
 
 ## Reference
- - https://blog.golang.org/concurrency-is-not-parallelism
- - http://tutorials.jenkov.com/java-concurrency/concurrency-vs-parallelism.html
- - https://medium.com/@tilaklodha/concurrency-and-parallelism-in-golang-5333e9a4ba64
- - https://wiki.haskell.org/Parallelism_vs._Concurrency
- - https://stackoverflow.com/a/1050257
- - https://light-tree.tistory.com/25
+ - [https://blog.golang.org/concurrency-is-not-parallelism](http://homoefficio.github.io/2019/02/02/Back-to-the-Essence-Concurrency-vs-Parallelism/?fbclid=IwAR0FCMcnSK4RbdnSy8TAuAO6q3eJbgJiCawD9zYQk_9RXJIg4ogFlesCmNg)
+ - [http://homoefficio.github.io/2019/02/02/Back-to-the-Essence-Concurrency-vs-Parallelism/?fbclid=IwAR0FCMcnSK4RbdnSy8TAuAO6q3eJbgJiCawD9zYQk_9RXJIg4ogFlesCmNg](http://homoefficio.github.io/2019/02/02/Back-to-the-Essence-Concurrency-vs-Parallelism/?fbclid=IwAR0FCMcnSK4RbdnSy8TAuAO6q3eJbgJiCawD9zYQk_9RXJIg4ogFlesCmNg)
+ - [http://tutorials.jenkov.com/java-concurrency/concurrency-vs-parallelism.html](http://tutorials.jenkov.com/java-concurrency/concurrency-vs-parallelism.html)
+ - [https://medium.com/@tilaklodha/concurrency-and-parallelism-in-golang-5333e9a4ba64](https://medium.com/@tilaklodha/concurrency-and-parallelism-in-golang-5333e9a4ba64)
+ - [https://wiki.haskell.org/Parallelism_vs._Concurrency](https://wiki.haskell.org/Parallelism_vs._Concurrency)
+ - [https://stackoverflow.com/a/1050257](https://stackoverflow.com/a/1050257)
+ - [https://light-tree.tistory.com/25](https://light-tree.tistory.com/25)
