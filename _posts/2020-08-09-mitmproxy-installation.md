@@ -49,6 +49,10 @@ Command를 실행하면 시스템 키체인에 mitmproxy 인증서를 등록합�
 
 ![인증서 등록](/images/2020-08-09-mitmproxy-installation/certificates-registration.png)
 
+#### firefox 브라우저를 사용할 경우
+파이어폭스는 내장된 인증서 매니저를 사용합니다.  
+따라서 `$HOME/.mitmproxy/mitmproxy-ca-cert.pem`의 인증서를 설정에서 등록해줘야 합니다.
+
 ### proxy 설정
 ```bash
 # 프록시 설정
@@ -94,6 +98,24 @@ mitmproxy
 # mitmproxy 종료 후 proxy 설정 복원
 networksetup -setwebproxystate "Wi-Fi" off
 networksetup -setsecurewebproxystate "Wi-Fi" off
+```
+
+### Script
+매번 프록시 세팅을 켜고 끄기가 매우 번거롭기 때문에 쉘 스크립트를 이용해서 사용하시면 더욱 편하게 사용할 수 있습니다.
+
+```sh
+#!/bin/bash
+function restore_proxy {
+  echo "Close mitmproxy"
+  echo "Restore system proxy settings"
+  networksetup -setwebproxystate 'Wi-Fi' off && networksetup -setsecurewebproxystate 'Wi-Fi' off
+}
+
+trap restore_proxy EXIT
+echo "Set system proxy settings"
+echo "Run mitmproxy"
+networksetup -setwebproxy 'Wi-Fi' localhost 8080 && networksetup -setsecurewebproxy 'Wi-Fi' localhost 8080
+mitmproxy
 ```
 
 ## 테스트
