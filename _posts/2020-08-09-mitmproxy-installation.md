@@ -2,7 +2,6 @@
 layout: post
 title: "mitmproxy 설치하기"
 tags: ["mitmproxy", "proxy"]
-canonical_url: 'https://blog.lalaworks.com/mitmproxy-installation/'
 ---
 
 ## mitmproxy 이란?
